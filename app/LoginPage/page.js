@@ -21,7 +21,7 @@ export default function LoginPage() {
         setError(null);
 
         try {
-            const res = await fetch('https://exhcangedata.vercel.app/users/api/auth/signin', {
+            const res = await fetch('/api/auth/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -78,6 +78,17 @@ export default function LoginPage() {
                         {error}
                     </div>
                 )}
+                <div className="mt-4 text-center">
+                    <p className="text-sm text-gray-600">
+                        Don't have an account?{' '}
+                        <button
+                            onClick={() => router.push('/RegisterPage')}
+                            className="text-blue-600 hover:text-blue-500 font-medium"
+                        >
+                            Register here
+                        </button>
+                    </p>
+                </div>
             </div>
         </div>
     );

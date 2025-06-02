@@ -392,6 +392,15 @@ export default function Home() {
           </table>
         </div>
       </div>
+
+      <div className="flex justify-center mt-6">
+        <button 
+          onClick={() => router.push('/RegisterPage')}
+          className="flex items-center gap-2 px-6 py-3 text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors"
+        >
+          <FaPlus /> Create New Account
+        </button>
+      </div>
     </div>
   );
 }
